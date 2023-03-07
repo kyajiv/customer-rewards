@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Customer.Rewards.Api/.vs
+/.vs
+/Customer.Rewards.Api/Customer.Rewards.Api/bin/Debug/net7.0
+/Customer.Rewards.Api/Customer.Rewards.Api/obj
+/Customer.Rewards.Api/Customer.Rewards.Api/Customer.Rewards.Api.csproj.user
+/Customer.Rewards.Api/Customer.Rewards.Api/appsettings.Development.json
