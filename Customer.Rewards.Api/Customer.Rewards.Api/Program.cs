@@ -31,12 +31,7 @@ namespace Customer.Rewards.Api
             builder.Services.AddTransient<ITransactionHistoryRepository, TransactionHistoryRepository>();
             builder.Services.AddTransient<ICustomerRewardsManager, CustomerRewardsManager>();
 
-            // add health check
-            builder.Services.AddHealthChecks();
-
             var app = builder.Build();
-
-            app.MapHealthChecks("/health-check");
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
