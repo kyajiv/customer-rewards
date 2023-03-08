@@ -13,6 +13,7 @@ namespace Customer.Rewards.Api.Repository
                 throw new BadHttpRequestException("Invalid customer id");
             }
 
+            // Pull transaction history data from TransactionHistory.json
             using (var r = new StreamReader(Directory.GetCurrentDirectory() + @"/Resources/TransactionHistory.json"))
             {
                 string json = r.ReadToEnd();

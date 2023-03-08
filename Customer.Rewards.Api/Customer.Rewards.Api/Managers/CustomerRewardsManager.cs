@@ -29,9 +29,12 @@ namespace Customer.Rewards.Api.Managers
             }
 
 
-            var response = new RewardPointsResponse();                            
+            var response = new RewardPointsResponse();     
+            
+            // group by Month, year to get points earned in each month
             response.MonthlyRewardPoints = transactions.Select(c => new { MonthYear = c.TransactionDate.ToString("MMM, yyyy"), Points = CalculatePoints(c.Amount) }).Where(c => c.Points > 0)
                 .GroupBy(c => c.MonthYear).Select(c => new MonthlyRewardPointsResponse { MonthYear = c.Key, TotalRewardPoints = c.Sum(p => p.Points) }).ToList();
+            
             response.TotalRewardPoints = response.MonthlyRewardPoints.Sum(p => p.TotalRewardPoints);
 
             return response;
@@ -39,6 +42,7 @@ namespace Customer.Rewards.Api.Managers
 
         private int CalculatePoints(decimal amount)
         {
+            // reward point threshold amounts are configurable in RewardPointsThreshold.json file
             using (var r = new StreamReader(Directory.GetCurrentDirectory() + @"/Resources/RewardPointsThreshold.json"))
             {
                 string json = r.ReadToEnd();

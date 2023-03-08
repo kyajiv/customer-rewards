@@ -1,4 +1,5 @@
 using Customer.Rewards.Api.Managers.Interface;
+using Customer.Rewards.Api.Response;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Customer.Rewards.Api.Controllers
@@ -17,10 +18,10 @@ namespace Customer.Rewards.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get(long customerId)
+        public RewardPointsResponse Get(long customerId)
         {
             var rewardResponse = customerRewardsManager.GetCustomerRewardsById(customerId);
-            return Ok(rewardResponse);
+            return rewardResponse;
         }
     }
 }
