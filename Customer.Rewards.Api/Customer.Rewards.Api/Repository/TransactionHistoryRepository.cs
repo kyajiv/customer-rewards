@@ -1,4 +1,5 @@
-﻿using Customer.Rewards.Api.Models;
+﻿using Customer.Rewards.Api.Exceptions;
+using Customer.Rewards.Api.Models;
 using Customer.Rewards.Api.Repository.Interface;
 using Newtonsoft.Json;
 
@@ -10,7 +11,7 @@ namespace Customer.Rewards.Api.Repository
         {
             if (customerId < 1)
             {
-                throw new BadHttpRequestException("Invalid customer id");
+                throw new InvalidCustomerIdException("Invalid customer id");
             }
 
             // Pull transaction history data from TransactionHistory.json

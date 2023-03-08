@@ -1,3 +1,4 @@
+using Customer.Rewards.Api.Exceptions.Filters;
 using Customer.Rewards.Api.Managers;
 using Customer.Rewards.Api.Managers.Interface;
 using Customer.Rewards.Api.Repository;
@@ -13,7 +14,9 @@ namespace Customer.Rewards.Api
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+            // register filters
+            builder.Services.AddControllers(options => options.Filters.Add<InvalidCustomerIdExceptionFilterAttribute>());
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -34,7 +37,6 @@ namespace Customer.Rewards.Api
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

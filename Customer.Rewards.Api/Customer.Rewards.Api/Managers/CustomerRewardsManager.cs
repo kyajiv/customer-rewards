@@ -1,4 +1,5 @@
-﻿using Customer.Rewards.Api.Managers.Interface;
+﻿using Customer.Rewards.Api.Exceptions;
+using Customer.Rewards.Api.Managers.Interface;
 using Customer.Rewards.Api.Models;
 using Customer.Rewards.Api.Repository.Interface;
 using Customer.Rewards.Api.Response;
@@ -19,7 +20,7 @@ namespace Customer.Rewards.Api.Managers
         {
             if (customerId < 1)
             {
-                throw new BadHttpRequestException("Invalid customer id");
+                throw new InvalidCustomerIdException("Invalid customer id");
             }
 
             var transactions = transactionHistoryRepository.GetTransactionHistory(customerId);
