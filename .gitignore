@@ -8,3 +8,5 @@
 /Customer.Rewards.Api/Customer.Rewards.Api/obj
 /Customer.Rewards.Api/Customer.Rewards.Api/Customer.Rewards.Api.csproj.user
 /Customer.Rewards.Api/Customer.Rewards.Api/appsettings.Development.json
+/Customer.Rewards.Api/Customer.Rewards.Api.Tests/obj
+/Customer.Rewards.Api/Customer.Rewards.Api.Tests/bin/Debug/net7.0
