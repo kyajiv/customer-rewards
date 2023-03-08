@@ -18,6 +18,12 @@ namespace Customer.Rewards.Api.Controllers
             this.customerRewardsManager = customerRewardsManager;
         }
 
+        /// <summary>
+        /// Get customer reward points
+        /// </summary>
+        /// <param name="customerId">The unique customer id</param>
+        /// <returns>Reward Points Response</returns>
+        /// <exception cref="InvalidCustomerIdException">Invalid customer id exception</exception>
         [HttpGet]
         public RewardPointsResponse Get(long customerId)
         {
