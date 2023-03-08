@@ -1,8 +1,10 @@
 # Customer Rewards
 Sample web api and container based application using .NET 7.
 
+
 # Tools and IDE
 This project is built using Visual Studio 2022 and .NET 7. To run this project locally, use Visual Studio 2022 or later. This project also supports containers and to run in container, use docker desktop. To open the project solution, check out the code and open file Customer.Rewards.Api/Customer.Rewards.Api.sln using Visual Studio.
+
 
 # Docker Support
 
@@ -20,17 +22,22 @@ docker run -ti --rm -p 8080:80 --name customerrewardsimagecontainer customerrewa
 
 Open url in browser http://localhost:8080/swagger/index.html 
 
+
 # API Documentation
 API documentation of request/response using swagger is available at {Scheme}://{ServiceHost}:{ServicePort}/swagger
 
 ![image](https://user-images.githubusercontent.com/20542279/223698915-10b1a9b8-3707-4962-9261-cd9d2af70ed5.png)
 
+
 # Health Check Endpoint
 Health check endpoint can be used to monitor the service health. Health check endpoint {Scheme}://{ServiceHost}:{ServicePort}/health-check 
 
+
 # Dataset 
 Following transaction data set is used which is under Resources/TransactionHistory.json
+
 ![image](https://user-images.githubusercontent.com/20542279/223702803-21ccbff2-03c7-4431-9cfb-a0ca9bbc4808.png)
+
 
 # Test Client
  To test this api, we can use any client like postman or Swagger UI. 
