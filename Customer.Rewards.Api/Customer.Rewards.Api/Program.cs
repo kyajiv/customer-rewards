@@ -1,3 +1,7 @@
+using Customer.Rewards.Api.Managers;
+using Customer.Rewards.Api.Managers.Interface;
+using Customer.Rewards.Api.Repository;
+using Customer.Rewards.Api.Repository.Interface;
 
 namespace Customer.Rewards.Api
 {
@@ -13,6 +17,10 @@ namespace Customer.Rewards.Api
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            // DI - Register repository 
+            builder.Services.AddTransient<ITransactionHistoryRepository, TransactionHistoryRepository>();
+            builder.Services.AddTransient<ICustomerRewardsManager, CustomerRewardsManager>();
 
             var app = builder.Build();
 

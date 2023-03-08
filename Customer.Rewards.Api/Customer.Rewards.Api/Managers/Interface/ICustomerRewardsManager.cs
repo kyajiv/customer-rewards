@@ -4,6 +4,6 @@ namespace Customer.Rewards.Api.Managers.Interface
 {
     public interface ICustomerRewardsManager
     {
-        RewardPointsResponse GetCustomerRewardsById(long customterId);
+        RewardPointsResponse GetCustomerRewardsById(long customerId);
     }
 }

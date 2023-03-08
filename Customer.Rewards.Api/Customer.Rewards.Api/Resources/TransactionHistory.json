@@ -1,0 +1,62 @@
+[
+  {
+    "Id": 1,
+    "TransactionDate": "2023-01-06T00:00:00",
+    "CustomerId": 1,
+    "Amount": 141.0
+  },
+  {
+    "Id": 2,
+    "TransactionDate": "2023-01-13T00:00:00",
+    "CustomerId": 3,
+    "Amount": 127.0
+  },
+  {
+    "Id": 3,
+    "TransactionDate": "2023-01-13T00:00:00",
+    "CustomerId": 1,
+    "Amount": 139.5
+  },
+  {
+    "Id": 4,
+    "TransactionDate": "2023-01-16T00:00:00",
+    "CustomerId": 3,
+    "Amount": 142.0
+  },
+  {
+    "Id": 5,
+    "TransactionDate": "2023-01-19T00:00:00",
+    "CustomerId": 1,
+    "Amount": 72.0
+  },
+  {
+    "Id": 6,
+    "TransactionDate": "2023-01-19T00:00:00",
+    "CustomerId": 3,
+    "Amount": 106.0
+  },
+  {
+    "Id": 7,
+    "TransactionDate": "2023-02-02T00:00:00",
+    "CustomerId": 1,
+    "Amount": 65.0
+  },
+  {
+    "Id": 8,
+    "TransactionDate": "2023-02-08T00:00:00",
+    "CustomerId": 2,
+    "Amount": 135.0
+  },
+  {
+    "Id": 9,
+    "TransactionDate": "2023-03-02T00:00:00",
+    "CustomerId": 1,
+    "Amount": 96.0
+  },
+  {
+    "Id": 10,
+    "TransactionDate": "2023-03-04T00:00:00",
+    "CustomerId": 2,
+    "Amount": 20.0
+  }
+]

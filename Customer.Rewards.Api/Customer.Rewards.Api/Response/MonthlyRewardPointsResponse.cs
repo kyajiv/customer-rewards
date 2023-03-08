@@ -2,7 +2,7 @@
 {
     public class MonthlyRewardPointsResponse
     {
-        public string TotalRewardPoints { get; set; }
+        public int TotalRewardPoints { get; set; }
         public string MonthYear { get; set; }
     }
 }
