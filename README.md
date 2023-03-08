@@ -12,12 +12,15 @@ To build the Docker image and run the container inside docker Linux instance, do
 Open command line and navigate to folder containing solution file Customer.Rewards.Api.sln.
 
 To create the Docker image, run the following command.
+
 docker build -t customerrewardsimage -f Customer.Rewards.Api\Dockerfile .
 
 To view all the Docker images, run the following command.
+
 docker images
 
 To create and run the container, run the following command.
+
 docker run -ti --rm -p 8080:80 --name customerrewardsimagecontainer customerrewardsimage
 
 Open url in browser http://localhost:8080/swagger/index.html 
@@ -41,6 +44,7 @@ Following transaction data set is used which is under Resources/TransactionHisto
 
 # Test Client
  To test this api, we can use any client like postman or Swagger UI. 
+ 
 ![image](https://user-images.githubusercontent.com/20542279/223704391-95044aeb-26a0-43a8-b381-2ecf64527352.png)
 
 
